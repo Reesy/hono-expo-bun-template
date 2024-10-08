@@ -1,0 +1,5 @@
+[workspaces]
+frontend = "./frontend"
+backend = "./backend"
+mobile = "./mobile"
+shared = "./shared"

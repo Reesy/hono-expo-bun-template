@@ -1,0 +1,18 @@
+{
+  "name": "your-monorepo",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "mobile",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "bun run --parallel */dev",
+    "build": "bun run --parallel */build",
+    "lint": "bun run --parallel */lint"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3"
+  }
+}
