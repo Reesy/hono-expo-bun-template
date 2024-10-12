@@ -1,5 +1,5 @@
 {
-  "name": "your-monorepo",
+  "name": "hono-vite-expo-bun-template",
   "private": true,
   "workspaces": [
     "frontend",
