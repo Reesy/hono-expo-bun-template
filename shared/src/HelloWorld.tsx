@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { hc } from 'hono/client'
-import { type ApiRoutes } from '@backend/src'
+import { type ApiRoutes } from '@backend/index'
 
 const client = hc<ApiRoutes>('/')
 

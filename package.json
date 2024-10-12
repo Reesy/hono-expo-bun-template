@@ -1,0 +1,27 @@
+{
+  "name": "hono-vite-expo-bun-template",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "mobile",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "bun run dev:frontend & bun run dev:backend & bun run dev:mobile",
+    "dev:frontend": "cd frontend && bun run dev",
+    "dev:backend": "cd backend && bun run dev",
+    "dev:mobile": "cd mobile && bun run start",
+    "build": "bun run build:frontend && bun run build:backend && bun run build:mobile",
+    "build:frontend": "cd frontend && bun run build",
+    "build:backend": "cd backend && bun run build",
+    "build:mobile": "cd mobile && bun run build",
+    "lint": "bun run lint:frontend && bun run lint:backend && bun run lint:mobile",
+    "lint:frontend": "cd frontend && bun run lint",
+    "lint:backend": "cd backend && bun run lint",
+    "lint:mobile": "cd mobile && bun run lint"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3"
+  }
+}
