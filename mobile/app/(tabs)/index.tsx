@@ -4,7 +4,11 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import TestHono from '@shared/src/TestHono';
+import HelloWorld from '@shared/src/HelloWorld'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
+const queryClient = new QueryClient()
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
@@ -16,8 +20,9 @@ export default function HomeScreen() {
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
+        <ThemedText type="title">Welcomzze!</ThemedText>
         <HelloWave />
+
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
@@ -29,6 +34,9 @@ export default function HomeScreen() {
           </ThemedText>{' '}
           to open developer tools.
         </ThemedText>
+        <QueryClientProvider client={queryClient}>
+          <HelloWorld />
+        </QueryClientProvider>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 2: Explore</ThemedText>
