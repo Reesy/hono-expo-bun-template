@@ -26,7 +26,6 @@ This is a monorepo project using Bun workspaces.
 
 ## Project Structure
 
-- `frontend`: React frontend application
 - `backend`: Bun backend application
 - `mobile`: React Native mobile application
 - `shared`: Shared code and components
