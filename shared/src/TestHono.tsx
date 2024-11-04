@@ -1,7 +1,8 @@
 import React from 'react';
 const { hc } = require("hono/dist/client") as typeof import("hono/client");
 import { type ApiRoutes } from '@backend/index'
-const client = hc<ApiRoutes>("/");
+import config from './utilities/config';
+const client = hc<ApiRoutes>(config.apiUrl);
 
 
 const TestHono = () => {
