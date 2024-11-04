@@ -2,7 +2,8 @@ import { useQuery } from '@tanstack/react-query'
 const { hc } = require("hono/dist/client") as typeof import("hono/client");
 import { type ApiRoutes } from '@backend/index'
 import { View, Text, StyleSheet } from 'react-native';
-const client = hc<ApiRoutes>('http://localhost:3000')
+import config from './utilities/config';
+const client = hc<ApiRoutes>(config.apiUrl)
 
 const HelloWorld = () => {
   const query = useQuery({

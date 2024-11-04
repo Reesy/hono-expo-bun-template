@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "bun run dev:backend & bun run dev:mobile",
     "dev:backend": "cd backend && bun run dev",
-    "dev:mobile": "cd mobile && bun run start -c",
+    "dev:mobile": "bun run scripts/setup-local.ts && cd mobile && bun run start -c",
     "build": "bun run build:backend && bun run build:mobile",
     "build:backend": "cd backend && bun run build",
     "build:mobile": "cd mobile && bun run build",
