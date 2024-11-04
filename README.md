@@ -1,39 +1,36 @@
-# Your Monorepo Project
+# hono-expo-bun-template
 
-This is a monorepo project using Bun workspaces.
+A project that makes uses of hono-dev for strongly typed backed->frontend APIs using zod schema and validation.
+
+
+Prerequisites: 
+- Ensure that bun is installed
+- Add `EXPO_USE_METRO_WORKSPACE_ROOT=1` to ./mobile/.env otherwise expo's web view will not work.
+
 
 ## Setup
 
 1. Install dependencies:
-   ```sh
+   ```
    bun install
    ```
 
-2. Run the development servers:
+2. Run the mobile (for both mobile and web):
    ```sh
-   bun run dev
+   bun dev:mobile
    ```
 
-3. Build the project:
+3. Run the backend:
    ```sh
-   bun run build
-   ```
-
-4. Lint the project:
-   ```sh
-   bun run lint
+   bun dev:backend
    ```
 
 ## Project Structure
 
 - `backend`: Bun backend application
 - `mobile`: React Native mobile application
-- `shared`: Shared code and components
+- `shared`: Shared utility components.
 
-## Notes
-
-- Ensure you have Bun installed on your system.
-- For the mobile app, you'll need to have Expo CLI installed globally.
 
 Looks like monorepos are hard to support, perhaps top level package imports is an option,. 
 

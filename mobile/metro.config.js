@@ -14,7 +14,6 @@ defaultConfig.resolver.sourceExts.push('cjs');
 // Include shared, frontend, and backend directories in watchFolders
 defaultConfig.watchFolders = [
   path.resolve(__dirname, '..', 'shared'),
-  path.resolve(__dirname, '..', 'frontend'),
   path.resolve(__dirname, '..', 'backend'),
 ];
 
