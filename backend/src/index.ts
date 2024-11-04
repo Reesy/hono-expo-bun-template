@@ -5,6 +5,11 @@ import { z } from 'zod'
 
 const app = new Hono()
 
+app.use('/api/*', cors({
+  origin: '*',
+  allowHeaders: ['GET', 'POST'],
+}))
+
 export const helloRoute = new Hono()
 .get(
   '/',
@@ -22,7 +27,7 @@ export const helloRoute = new Hono()
   })
 
 const apiRoutes = app.basePath('/api').route('/hello', helloRoute)
-app.use('/api/*', cors())
+
 
 
 
